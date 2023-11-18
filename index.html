@@ -2,72 +2,64 @@
 <html>
 <head>
     <title>Short Story Group</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <style>
-        body { font-family: Arial, sans-serif; }
-        header { background-color: #4CAF50; color: white; text-align: center; padding: 1em 0; }
-        nav { text-align: center; margin-top: 1em; }
-        nav a { margin: 0 15px; text-decoration: none; color: black; }
-        .container { width: 80%; margin: auto; overflow: hidden; }
-        .story-gallery, #authors-table, .story-section { padding: 20px 0; }
-        footer { text-align: center; padding: 20px 0; background-color: #333; color: white; }
+        body { display: flex; min-height: 100vh; flex-direction: column; }
+        main { flex: 1 0 auto; }
+        .container { width: 85%; margin-top: 20px; }
+        .page-footer { margin-top: 20px; }
+        .section { margin-top: 40px; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to the Short Story Group</h1>
+        <nav class="nav-wrapper green">
+            <div class="container">
+                <a href="#" class="brand-logo">Short Story Group</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#erikson-stages">Erikson's Stages</a></li>
+                    <li><a href="#authors-table">Authors</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#stories">Stories</a>
-        <a href="#authors">Authors</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <main>
+        <div class="container">
+            <h2>Welcome to our Short Story Group</h2>
+            <!-- Introduction or other content -->
 
-    <div class="container">
-        <!-- Other sections here -->
+            <div id="erikson-stages" class="section">
+                <h3>Erikson's Stages of Development</h3>
+                <blockquote>
+                    "We have found Erik Erikson’s schema of development across the life cycle to provide useful definitions of positive and negative change at each of his 'eight stages of man.' ... [detailed descriptions of each stage] ... Of course, the writers of such stories may not be thinking in any such terms. Their gift to us has been to infuse their characters and situations with such intensity and clarity that, if we let them—that is, if we take them seriously—they become part of our lives and remain with us, sometimes even more clearly than the people we know. They manage to take life itself and present it not only with color and drama but also with structure, so that it may seem more real than our actual daily experiences."
+                </blockquote>
+            </div>
 
-        <section id="authors">
-            <h2>Our Authors and Stories</h2>
-            <table id="authors-table" class="display" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>Author Name</th>
-                        <th>Story Title</th>
-                        <th>Publication Date</th>
-                        <th>Genre</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Alice Johnson</td><td>The Hidden Valley</td><td>2022-06-15</td><td>Fantasy</td></tr>
-                    <tr><td>Bob Smith</td><td>Lost in Time</td><td>2023-01-20</td><td>Science Fiction</td></tr>
-                    <tr><td>Carol Taylor</td><td>Mystery of the Old Mansion</td><td>2023-03-11</td><td>Mystery</td></tr>
-                    <tr><td>David Lee</td><td>Under the Stars</td><td>2022-08-05</td><td>Romance</td></tr>
-                    <tr><td>Emily White</td><td>The Last Journey</td><td>2023-02-12</td><td>Adventure</td></tr>
-                    <tr><td>Frank Green</td><td>Shadow of the Past</td><td>2022-11-23</td><td>Thriller</td></tr>
-                    <tr><td>Grace Hall</td><td>Whispers in the Wind</td><td>2022-09-17</td><td>Drama</td></tr>
-                    <tr><td>Henry Adams</td><td>Chasing Echoes</td><td>2023-04-21</td><td>Mystery</td></tr>
-                    <tr><td>Irene Brown</td><td>The Forgotten Island</td><td>2022-07-30</td><td>Fantasy</td></tr>
-                    <tr><td>James Wilson</td><td>A Time to Remember</td><td>2023-05-16</td><td>Historical Fiction</td></tr>
-                </tbody>
-            </table>
-        </section>
+            <div id="authors-table" class="section">
+                <h3>Authors and Stories</h3>
+                <table id="authorsDataTable" class="display" style="width:100%">
+                    <!-- Table headers and data rows here -->
+                </table>
+            </div>
+        </div>
+    </main>
 
-        <!-- Other sections continue here -->
-    </div>
-
-    <footer>
-        <p>&copy; 2023 Short Story Group</p>
+    <footer class="page-footer green">
+        <div class="container">
+            <h5 class="white-text">Short Story Group</h5>
+            <p class="grey-text text-lighten-4">A community of passionate storytellers and readers.</p>
+        </div>
     </footer>
 
     <script>
         $(document).ready(function() {
-            $('#authors-table').DataTable();
+            $('#authorsDataTable').DataTable();
         });
     </script>
 </body>
