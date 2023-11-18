@@ -12,8 +12,6 @@
         nav a { margin: 0 15px; text-decoration: none; color: black; }
         .container { width: 80%; margin: auto; overflow: hidden; }
         .story-gallery, #authors-table, .story-section { padding: 20px 0; }
-        .story { margin-bottom: 20px; }
-        .story-title { font-weight: bold; }
         footer { text-align: center; padding: 20px 0; background-color: #333; color: white; }
     </style>
 </head>
@@ -34,23 +32,30 @@
     <div class="container">
         <!-- Other sections here -->
 
-        <section id="stories">
-            <h2>Featured Stories</h2>
-            <div class="story-section">
-                <div class="story">
-                    <div class="story-title">The Hidden Valley</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                </div>
-                <div class="story">
-                    <div class="story-title">Lost in Time</div>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
-                </div>
-                <div class="story">
-                    <div class="story-title">Mystery of the Old Mansion</div>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                </div>
-                <!-- Add more stories as needed -->
-            </div>
+        <section id="authors">
+            <h2>Our Authors and Stories</h2>
+            <table id="authors-table" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Author Name</th>
+                        <th>Story Title</th>
+                        <th>Publication Date</th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Alice Johnson</td><td>The Hidden Valley</td><td>2022-06-15</td><td>Fantasy</td></tr>
+                    <tr><td>Bob Smith</td><td>Lost in Time</td><td>2023-01-20</td><td>Science Fiction</td></tr>
+                    <tr><td>Carol Taylor</td><td>Mystery of the Old Mansion</td><td>2023-03-11</td><td>Mystery</td></tr>
+                    <tr><td>David Lee</td><td>Under the Stars</td><td>2022-08-05</td><td>Romance</td></tr>
+                    <tr><td>Emily White</td><td>The Last Journey</td><td>2023-02-12</td><td>Adventure</td></tr>
+                    <tr><td>Frank Green</td><td>Shadow of the Past</td><td>2022-11-23</td><td>Thriller</td></tr>
+                    <tr><td>Grace Hall</td><td>Whispers in the Wind</td><td>2022-09-17</td><td>Drama</td></tr>
+                    <tr><td>Henry Adams</td><td>Chasing Echoes</td><td>2023-04-21</td><td>Mystery</td></tr>
+                    <tr><td>Irene Brown</td><td>The Forgotten Island</td><td>2022-07-30</td><td>Fantasy</td></tr>
+                    <tr><td>James Wilson</td><td>A Time to Remember</td><td>2023-05-16</td><td>Historical Fiction</td></tr>
+                </tbody>
+            </table>
         </section>
 
         <!-- Other sections continue here -->
