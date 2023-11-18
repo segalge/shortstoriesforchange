@@ -1,65 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Short Story Group</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <style>
-        body { display: flex; min-height: 100vh; flex-direction: column; }
-        main { flex: 1 0 auto; }
-        .container { width: 85%; margin-top: 20px; }
-        .page-footer { margin-top: 20px; }
-        .section { margin-top: 40px; }
-    </style>
+    <title>Short Stories for Change</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="nav-wrapper green">
-            <div class="container">
-                <a href="#" class="brand-logo">Short Story Group</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#erikson-stages">Erikson's Stages</a></li>
-                    <li><a href="#authors-table">Authors</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <!-- Erikson's Stages Section -->
+    <section>
+        <h2>Erikson's Stages of Development</h2>
+        <p>
+            "We have found Erik Erikson’s schema of development across the life cycle to provide useful definitions of positive and negative change at each of his 'eight stages of man.' ... [detailed descriptions of each stage] ... Of course, the writers of such stories may not be thinking in any such terms. Their gift to us has been to infuse their characters and situations with such intensity and clarity that, if we let them—that is, if we take them seriously—they become part of our lives and remain with us, sometimes even more clearly than the people we know. They manage to take life itself and present it not only with color and drama but also with structure, so that it may seem more real than our actual daily experiences."
+        </p>
+    </section>
 
-    <main>
-        <div class="container">
-            <h2>Welcome to our Short Story Group</h2>
-            <!-- Introduction or other content -->
-
-            <div id="erikson-stages" class="section">
-                <h3>Erikson's Stages of Development</h3>
-                <blockquote>
-                    "We have found Erik Erikson’s schema of development across the life cycle to provide useful definitions of positive and negative change at each of his 'eight stages of man.' ... [detailed descriptions of each stage] ... Of course, the writers of such stories may not be thinking in any such terms. Their gift to us has been to infuse their characters and situations with such intensity and clarity that, if we let them—that is, if we take them seriously—they become part of our lives and remain with us, sometimes even more clearly than the people we know. They manage to take life itself and present it not only with color and drama but also with structure, so that it may seem more real than our actual daily experiences."
-                </blockquote>
-            </div>
-
-            <div id="authors-table" class="section">
-                <h3>Authors and Stories</h3>
-                <table id="authorsDataTable" class="display" style="width:100%">
-                    <!-- Table headers and data rows here -->
-                </table>
-            </div>
-        </div>
-    </main>
-
-    <footer class="page-footer green">
-        <div class="container">
-            <h5 class="white-text">Short Story Group</h5>
-            <p class="grey-text text-lighten-4">A community of passionate storytellers and readers.</p>
-        </div>
-    </footer>
+    <!-- DataTable Section -->
+    <section>
+        <h2>Story List</h2>
+        <table id="storyTable" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Year</th>
+                    <th>Genre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>The Hidden Path</td><td>Alice Munro</td><td>2018</td><td>Mystery</td></tr>
+                <tr><td>Lost in Dreams</td><td>George Saunders</td><td>2019</td><td>Fantasy</td></tr>
+                <tr><td>Shadows of Time</td><td>Margaret Atwood</td><td>2020</td><td>Science Fiction</td></tr>
+                <tr><td>Echoes of the Past</td><td>Chimamanda Ngozi Adichie</td><td>2021</td><td>Historical Fiction</td></tr>
+                <tr><td>The Last Whisper</td><td>Kazuo Ishiguro</td><td>2017</td><td>Drama</td></tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </section>
 
     <script>
         $(document).ready(function() {
-            $('#authorsDataTable').DataTable();
+            $('#storyTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
         });
     </script>
 </body>
