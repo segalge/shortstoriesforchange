@@ -6,53 +6,32 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
     <style>
-        body {
-            background-color: #e0f7fa; /* Vaporwave background color */
-        }
-        h2 {
-            color: #ff6f61; /* Vaporwave accent color */
-        }
-        .dataTables_wrapper .dataTables_filter input,
-        .dataTables_wrapper .dataTables_length select {
-            border-color: #ff6f61; /* Vaporwave accent color for input and select */
-            color: #ff6f61; /* Vaporwave text color */
-        }
-        /* Add more custom styles here */
+        /* Your custom styles */
     </style>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <!-- Erikson's Stages Section -->
-        <section>
-            <h2>Erikson's Stages of Development</h2>
-            <p>
-                "We have found Erik Erikson’s schema of development across the life cycle to provide useful definitions of positive and negative change at each of his 'eight stages of man.' ... [detailed descriptions of each stage] ..."
-            </p>
-        </section>
+    <!-- Your other content -->
 
-        <!-- DataTable Section -->
-        <section>
-            <h2>Story List</h2>
-            <table id="storyTable" class="highlight">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Year</th>
-                        <th>Genre</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>The Echoes of Time</td><td>Emily Stone</td><td>2020</td><td>Fantasy</td></tr>
-                    <tr><td>Whispers of the Past</td><td>John Doe</td><td>2019</td><td>Mystery</td></tr>
-                    <tr><td>Lost in the Shadows</td><td>Jane Smith</td><td>2021</td><td>Thriller</td></tr>
-                    <tr><td>The Last Dream</td><td>Alan Moore</td><td>2018</td><td>Science Fiction</td></tr>
-                    <tr><td>The Forgotten Path</td><td>Sarah Connor</td><td>2022</td><td>Adventure</td></tr>
-                </tbody>
-            </table>
-        </section>
+    <!-- DataTable Section -->
+    <div class="container">
+        <h2>Story List</h2>
+        <table id="storyTable" class="highlight">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Year</th>
+                    <th>Genre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>The Echoes of Time</td><td>Emily Stone</td><td>2020</td><td>Fantasy</td></tr>
+                <tr><td>Whispers of the Past</td><td>John Doe</td><td>2019</td><td>Mystery</td></tr>
+                <!-- More rows here -->
+            </tbody>
+        </table>
     </div>
 
     <script>
