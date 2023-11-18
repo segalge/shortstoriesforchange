@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Web Page</title>
+    <title>Short Story Group</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        header { background-color: #4CAF50; color: white; text-align: center; padding: 1em 0; }
+        nav { text-align: center; margin-top: 1em; }
+        nav a { margin: 0 15px; text-decoration: none; color: black; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        .story-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px 0; }
+        .story { border: 1px solid #ddd; padding: 15px; }
+        footer { text-align: center; padding: 20px 0; background-color: #333; color: white; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Web Page, Hello WORLD!!!!!!</h1>
-    <p>This is a paragraph on my web page.</p>
+    <header>
+        <h1>Welcome to the Short Story Group</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to our community of short story enthusiasts! Explore, read, and share your tales.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Learn more about our group and our passion for storytelling.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Story Gallery</h2>
+            <div class="story-gallery">
+                <!-- Story items will go here -->
+                <div class="story">Story 1</div>
+                <div class="story">Story 2</div>
+                <div class="story">Story 3</div>
+                <!-- Add more stories as needed -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Name"><br>
+                <input type="email" placeholder="Email"><br>
+                <textarea placeholder="Your Message"></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Short Story Group</p>
+    </footer>
 </body>
 </html>
