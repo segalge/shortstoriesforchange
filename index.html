@@ -2,14 +2,18 @@
 <html>
 <head>
     <title>Short Story Group</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
     <style>
         body { font-family: Arial, sans-serif; }
         header { background-color: #4CAF50; color: white; text-align: center; padding: 1em 0; }
         nav { text-align: center; margin-top: 1em; }
         nav a { margin: 0 15px; text-decoration: none; color: black; }
         .container { width: 80%; margin: auto; overflow: hidden; }
-        .story-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px 0; }
-        .story { border: 1px solid #ddd; padding: 15px; }
+        .story-gallery, #authors-table, .story-section { padding: 20px 0; }
+        .story { margin-bottom: 20px; }
+        .story-title { font-weight: bold; }
         footer { text-align: center; padding: 20px 0; background-color: #333; color: white; }
     </style>
 </head>
@@ -22,107 +26,44 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
+        <a href="#stories">Stories</a>
+        <a href="#authors">Authors</a>
         <a href="#contact">Contact</a>
     </nav>
-    <!DOCTYPE html>
-    <head>
-        <title>DataTable Example</title>
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
-        <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
-    </head>
-    <body>
-        <table id="example" class="display" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Alice Johnson</td>
-                    <td>Software Engineer</td>
-                    <td>New York</td>
-                    <td>30</td>
-                    <td>2019-04-10</td>
-                    <td>$120,000</td>
-                </tr>
-                <tr>
-                    <td>Bob Smith</td>
-                    <td>Marketing Manager</td>
-                    <td>London</td>
-                    <td>45</td>
-                    <td>2015-08-15</td>
-                    <td>$135,000</td>
-                </tr>
-                <tr>
-                    <td>Carol Taylor</td>
-                    <td>Product Designer</td>
-                    <td>Tokyo</td>
-                    <td>38</td>
-                    <td>2017-11-28</td>
-                    <td>$105,000</td>
-                </tr>
-                <!-- Add more rows as needed -->
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                </tr>
-            </tfoot>
-        </table>
-    
-        <script>
-            $(document).ready(function() {
-                $('#example').DataTable();
-            });
-        </script>
-    </body>
+
     <div class="container">
-        <section id="home">
-            <h2>Home</h2>
-            <p>Welcome to our community of short story enthusiasts! Explore, read, and share your tales.</p>
-        </section>
+        <!-- Other sections here -->
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Learn more about our group and our passion for storytelling.</p>
-        </section>
-
-        <section id="gallery">
-            <h2>Story Gallery</h2>
-            <div class="story-gallery">
-                <!-- Story items will go here -->
-                <div class="story">Story 1</div>
-                <div class="story">Story 2</div>
-                <div class="story">Story 3</div>
+        <section id="stories">
+            <h2>Featured Stories</h2>
+            <div class="story-section">
+                <div class="story">
+                    <div class="story-title">The Hidden Valley</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                </div>
+                <div class="story">
+                    <div class="story-title">Lost in Time</div>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                </div>
+                <div class="story">
+                    <div class="story-title">Mystery of the Old Mansion</div>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                </div>
                 <!-- Add more stories as needed -->
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Name"><br>
-                <input type="email" placeholder="Email"><br>
-                <textarea placeholder="Your Message"></textarea><br>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+        <!-- Other sections continue here -->
     </div>
 
     <footer>
         <p>&copy; 2023 Short Story Group</p>
     </footer>
+
+    <script>
+        $(document).ready(function() {
+            $('#authors-table').DataTable();
+        });
+    </script>
 </body>
 </html>
