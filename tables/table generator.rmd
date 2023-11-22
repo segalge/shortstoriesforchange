@@ -1,0 +1,15 @@
+---
+title: "Generate Tables For Site"
+output: html_notebook
+---
+
+
+```{r}
+library(DT)
+# Create your DT table
+datatable(iris)
+
+# Save as an HTML widget
+library(htmlwidgets)
+saveWidget(datatable(iris), 'irisTable.html', selfcontained = TRUE)
+```
