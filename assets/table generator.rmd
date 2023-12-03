@@ -6,10 +6,12 @@ output: html_notebook
 
 ```{r}
 library(DT)
-# Create your DT table
-datatable(iris)
+
+library(readr)
+Copy_of_300_Plus_Workshop_Tested_Short_Stories_Sheet1 <- read_csv("GitHub/shortstoriesforchange/assets/Copy of 300 Plus Workshop-Tested Short Stories - Sheet1.csv")
+View(Copy_of_300_Plus_Workshop_Tested_Short_Stories_Sheet1)
 
 # Save as an HTML widget
 library(htmlwidgets)
-saveWidget(datatable(iris), 'irisTable.html', selfcontained = TRUE)
+saveWidget(Copy_of_300_Plus_Workshop_Tested_Short_Stories_Sheet1, 'Copy_of_300_Plus_Workshop_Tested_Short_Stories_Sheet1.html', selfcontained = TRUE)
 ```
