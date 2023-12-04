@@ -22,7 +22,7 @@ plugins:
 
 # Site settings
 url: 'https://segalge.github.io/shortstoriesforchange/'
-baseurl: ''
+baseurl: '/shortstoriesforchange'
 title: 'Short Stories for Change'
 description: ''
 permalink: pretty
