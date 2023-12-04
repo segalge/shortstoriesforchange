@@ -21,7 +21,7 @@ plugins:
 - jekyll-remote-theme
 
 # Site settings
-url: 'https://mydomain.com'
+url: 'https://segalge.github.io/shortstoriesforchange/'
 baseurl: ''
 title: 'Short Stories for Change'
 description: ''
