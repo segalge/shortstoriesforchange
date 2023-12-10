@@ -1,5 +1,5 @@
 # Set theme
-remote_theme: daviddarnes/alembic@main
+remote_theme: vfvong/jekyll-theme-quartz
 
 # File excludes
 exclude:

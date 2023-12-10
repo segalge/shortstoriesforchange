@@ -10,7 +10,9 @@ library(readr)
 library(tidyverse)
 library(htmlwidgets)
 
-Copy_of_300_Plus_Workshop_Tested_Short_Stories_Sheet1 <- read_csv("Copy of 300 Plus Workshop-Tested Short Stories - Sheet1.csv", show_col_types = FALSE) %>% as.data.frame() %>% filter_all(any_vars(complete.cases(.)))
+
+
+Copy_of_300_Plus_Workshop_Tested_Short_Stories_Sheet1 <- read_csv("shortstoriesforchange/assets/Copy of 300 Plus Workshop-Tested Short Stories - Sheet1.csv", show_col_types = FALSE) %>% as.data.frame() %>% filter_all(any_vars(complete.cases(.)))
 ```
 
 ```{r}
@@ -26,5 +28,5 @@ data_table
 ```{r}
 # Save as an HTML widget
 library(htmlwidgets)
-saveWidget(data_table, 'Copy_of_300_Plus_Workshop_Tested_Short_Stories_Sheet1.html', selfcontained = TRUE)
+saveWidget(data_table, 'shortstoriesforchange/assets/Copy_of_300_Plus_Workshop_Tested_Short_Stories_Sheet1.html', selfcontained = TRUE)
 ```
